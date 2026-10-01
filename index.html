@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuizMaster</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <!-- Start Screen -->
+        <section id="start-screen" class="screen">
+            <h1>QuizMaster</h1>
+            <p>Test your knowledge and see how high you can score!</p>
+
+            <div class="setup">
+                <label for="category">Choose Category</label>
+                <select id="category">
+                    <option value="general">General Knowledge</option>
+                    <option value="science">Science</option>
+                    <option value="technology">Technology</option>
+                    <option value="programming">Programming</option>
+                </select>
+            </div>
+
+            <button id="start-btn" class="primary-btn">
+                Start Quiz
+            </button>
+        </section>
+
+
+        <!-- Quiz Screen -->
+        <section id="quiz-screen" class="screen hidden">
+
+            <div class="quiz-header">
+                <span id="question-number">Question 1 of 10</span>
+                <span id="timer">15s</span>
+            </div>
+
+            <div class="progress-container">
+                <div id="progress-bar"></div>
+            </div>
+
+            <h2 id="question">
+                Question goes here
+            </h2>
+
+            <div id="answers" class="answers"></div>
+
+            <button id="next-btn" class="primary-btn next-btn" disabled>
+                Next Question
+            </button>
+
+        </section>
+
+
+        <!-- Result Screen -->
+        <section id="result-screen" class="screen hidden">
+
+            <h1>Quiz Completed!</h1>
+
+            <div class="score-circle">
+                <span id="score">0</span>
+                <small>/ 10</small>
+            </div>
+
+            <p id="result-message"></p>
+
+            <div class="result-details">
+                <p>Correct Answers: <strong id="correct-count">0</strong></p>
+                <p>Wrong Answers: <strong id="wrong-count">0</strong></p>
+                <p>Percentage: <strong id="percentage">0%</strong></p>
+            </div>
+
+            <button id="restart-btn" class="primary-btn">
+                Play Again
+            </button>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
